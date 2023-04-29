@@ -9,4 +9,4 @@ To automate the script to run every day, you can use a task scheduler such as cr
 2. Add the following line to the bottom of the file: 0 8 * * * /usr/bin/python3 /path/to/your/script.py
 3. Save and exit the crontab file.
 
-This will schedule the script to run at 8am every day. You can modify the timing by changing the first two numbers (in the example, "0" and "8") to represent the minute and hour that you want the script to run
+This will schedule the script to run at 8am every day. You can modify the timing by changing the first two numbers (in the example, "0" and "8") to represent the minute and hour that you want the script to run.
