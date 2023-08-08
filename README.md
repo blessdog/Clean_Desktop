@@ -1,12 +1,54 @@
 # Clean_Desktop
-Python script that organizes files on your desktop. 
 
-This script creates folders with names "Images", "Documents", and "Videos" on your desktop, and moves files with the corresponding extensions into those folders. The script also adds today's date to the beginning of each file name, to prevent overwriting of files with the same name.
 
-To automate the script to run every day, you can use a task scheduler such as cron on Linux or Task Scheduler on Windows. Here is an example of how to schedule the script to run every day at 8am on Linux:
 
-1. Open the terminal and enter crontab -e to edit your user's crontab file.
-2. Add the following line to the bottom of the file: 0 8 ``` /usr/bin/python3 /path/to/your/script.py```
+# Python Script for Organizing Files on Your Desktop
+
+This Python script helps you declutter your desktop by creating three folders: "Images," "Documents," and "Videos." It then intelligently moves files with corresponding extensions into these folders. To avoid any potential file name conflicts, the script adds the current date to the beginning of each file name.
+
+## Usage
+
+1. Download the `organize_desktop.py` script to your preferred directory.
+
+2. Open your terminal and navigate to the directory where the script is located.
+
+3. Run the script using the following command:
+
+   ```bash
+   python3 organize_desktop.py
+   ```
+
+Your desktop files will now be organized into the appropriate folders, and the script will prevent any file name clashes.
+
+## Automation (Linux Example)
+
+To make this process automatic, you can schedule the script to run daily using tools like `cron` on Linux. Here's how:
+
+1. Open your terminal and type `crontab -e` to edit your user's crontab.
+
+2. Add the following line to schedule the script to run every day at 8 AM:
+
+   ```bash
+   0 8 * * * /usr/bin/python3 /path/to/your/organize_desktop.py
+   ```
+
+   The five asterisks represent the minute, hour, day of the month, month, and day of the week.
+
 3. Save and exit the crontab file.
 
-This will schedule the script to run at 8am every day. You can modify the timing by changing the first two numbers (in the example, "0" and "8") to represent the minute and hour that you want the script to run.
+By following these steps, the script will automatically organize your desktop files at your specified time every day.
+
+## Contribution
+
+Feel free to contribute by opening issues or submitting pull requests. Your contributions can help improve the script and make it even more efficient!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+Remember to replace 
+```bash
+ /path/to/your/organize_desktop.py
+```
+with the actual path to your script. This markdown content can be directly copied and pasted into your GitHub README.md file to provide a clear guide for users interested in using and automating the script.
